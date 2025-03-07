@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=0.21.0
+Type=Application
+Categories=Game;Strategy;
+Name=Jagged Alliance 2 Stracciatella
+Exec=ja2.sh
+Icon=icon.jpg
+X-DBP-Screenshot=teaser1.jpg;teaser2.jpg;
+
+[Package Entry]
+Id=ja2_maquis196
+Name=Jagged Alliance 2 Stracciatella
+Arch=armhf
+Exec=ja2.sh
+Version=0.21.0
+Appdata=ja2
+Icon=icon.jpg
