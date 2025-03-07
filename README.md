@@ -1,11 +1,13 @@
 # dragonbox-ja2
 Jagged Alliance 2 - stracciatella release repository for Pandora and Pyra Handhelds
 
-https://ja2-stracciatella.github.io/
+[Upstream URL](https://ja2-stracciatella.github.io/)
+
+[Repo link](https://pyra-handheld.com/repo/apps/334)
 
 ## Datafiles
 
-https://ja2-stracciatella.github.io/how-to-run/
+[Data howto](https://ja2-stracciatella.github.io/how-to-run/)
 
 $ innoextract ~/setup_ja2_gog.exe
 mv Data data
