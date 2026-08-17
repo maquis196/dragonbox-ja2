@@ -4,3 +4,4 @@ gamedata.sqfs
 gamedata/content/packages/*
 /gamedata/ja2
 build/**
+**/.sw*
