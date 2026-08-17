@@ -9,11 +9,16 @@ RUN apt-get update && \
         cmake \
         cargo \
         wget \
+	g++ \
         squashfs-tools \
         zip \
 	libfltk1.3-dev \ 
 	libfltk-images1.3 \
     && rm -rf /var/lib/apt/lists/*
+
+RUN g++ --version && \
+    cmake --version && \
+    cargo --version
 
 WORKDIR /src
 
