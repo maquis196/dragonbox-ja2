@@ -34,7 +34,7 @@ jobs:
             --platform linux/arm/v7 \
             -v "$PWD:/src" \
             ja2-pyra-builder \
-            /src/local_build_dbp.sh
+            /bin/bash -c "/src/local_build_dbp.sh '$VERSION'"
 
       - name: Upload DBP
         uses: actions/upload-artifact@v4

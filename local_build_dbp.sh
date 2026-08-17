@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-VERSION="${1:?Usage: $0 <version>}"
+VERSION="${1:?Usage: $0 <version - example - 0.22.1>}"
 UPSTREAM_VERSION="${VERSION%-r*}"
 
 PACKAGE_NAME="ja2"
