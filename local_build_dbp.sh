@@ -21,10 +21,12 @@ cd ja2-stracciatella-${UPSTREAM_VERSION}
 mkdir _bin
 cd _bin
 cmake ..
-
 # cargo repo doesn't always like pyra
 export CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 make -j2
+
+## copy the needful to gamedata
+cp -a externalized ../../../gamedata
 cp ja2 ../../../gamedata/
 
 cd ../../..
