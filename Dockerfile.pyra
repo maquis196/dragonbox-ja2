@@ -10,6 +10,7 @@ RUN apt-get update && \
         cargo \
         wget \
 	g++ \
+        libfltk1.3-dev \
         squashfs-tools \
         zip \
 	libfltk1.3-dev \ 
