@@ -4,6 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+        curl \
         libsdl2-dev \
 	ca-certificates \
         cmake \
@@ -14,6 +15,8 @@ RUN apt-get update && \
         zip \
 	libfltk1.3-dev \ 
 	libfltk-images1.3 \
+	pkg-config \
+	libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install rustup + stable toolchain non-interactively
@@ -32,7 +35,8 @@ RUN mkdir -p /root/.cargo && \
 
 RUN g++ --version && \
     cmake --version && \
-    cargo --version
+    cargo --version && \
+    rustc --version
 
 WORKDIR /src
 
