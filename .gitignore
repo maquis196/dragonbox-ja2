@@ -3,3 +3,4 @@ gamedata.sqfs
 *dbp
 gamedata/content/packages/*
 /gamedata/ja2
+build/**

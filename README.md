@@ -26,7 +26,12 @@ TODO
 
 ## pipeline docker build
 
-TODO
+To trigger new deploy
+
+```
+git tag 0.22.1-r1
+git push origin 0.22.1-r1
+```
 
 # Pandora build
 

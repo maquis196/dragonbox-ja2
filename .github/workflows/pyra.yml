@@ -1,0 +1,43 @@
+name: Build Pyra package
+
+on:
+  push:
+    tags:
+      - '*-r*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      VERSION: ${{ github.ref_name }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            --platform linux/arm/v7 \
+            -f Dockerfile.pyra \
+            -t ja2-pyra-builder .
+
+      - name: Build DBP
+        run: |
+          docker run --rm \
+            --platform linux/arm/v7 \
+            -v "$PWD:/src" \
+            ja2-pyra-builder \
+            /src/local_build_dbp.sh
+
+      - name: Upload DBP
+        uses: actions/upload-artifact@v4
+        with:
+          name: ja2-pyra-${{ env.VERSION }}
+          path: '*.dbp'
