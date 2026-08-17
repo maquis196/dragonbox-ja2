@@ -53,8 +53,8 @@ EOF
 rm -f data.zip gamedata.sqfs
 mksquashfs gamedata gamedata.sqfs -comp xz
 
-cd "ja2-stracciatella-${UPSTREAM_VERSION}/assets"
-zip -r ../../data.zip *
-cd ../..
+cd assets
+zip -r ../data.zip *
+cd ..
 
 cat gamedata.sqfs data.zip > "${P}_maquis196.dbp"
