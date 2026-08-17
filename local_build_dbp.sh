@@ -25,9 +25,9 @@ cmake ..
 # cargo repo doesn't always like pyra
 export CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 make -j2
-cp ja2 ../../gamedata/
+cp ja2 ../../../gamedata/
 
-cd ../..
+cd ../../..
 
 ## Configure meta file
 cat > assets/meta/default.desktop <<EOF
